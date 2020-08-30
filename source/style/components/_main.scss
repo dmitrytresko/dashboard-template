@@ -1,0 +1,252 @@
+.wrapper {
+    display: flex;
+
+    width: 1370px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    width: 95%;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    
+    background: #E7E7E7;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    width: 79%;
+    padding: 1.2em;
+}
+
+.revenue-container {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 1.2em;
+}
+
+.revenue-monthly {
+    display: flex;
+    flex-direction: column;
+
+    width: 71%;
+    padding: 0 1em 0 2em;
+
+    background: $white;
+
+    &__topbar {
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+
+        &--inner {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            width: 30%;
+        }
+
+        &--btn {
+            height: 35%;
+
+            font-size: $semiTinyText;
+            font-family: 'Lato', sans-serif;
+            color: $title-color;
+
+            border-style: none;
+            border: none;
+            background: none;
+        }
+
+        &--btn:hover {
+            padding: 0 1em;
+
+            color: $white;
+
+            border-radius: 15vw;
+            background: $primary-color-light;
+            transition: all .4s;
+            cursor: pointer;        
+        }
+
+        &--dots {
+            @include createDots;
+        }
+    
+        &--dots:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__title {
+        padding: 2em 0;
+        @include titleDecor;
+    }
+
+    &__graphics {
+        padding-bottom: 2em;
+    }
+}
+
+.revenue-hour {
+    display: flex;
+    justify-content: center;
+
+    width: 27%;
+    background: $white;
+
+    &--inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        width: 100%; 
+        text-align: center;
+        background: url(../img/main/revenue_hour.png) no-repeat center center;
+    }
+
+    &__title {
+        padding: 2em 0 2em 0;
+        @include titleDecor;
+    }
+
+    &__subject {
+        display: flex;
+        align-items: center;
+
+        padding-bottom: 2em;
+        @include subjectDecor;
+    }
+}
+
+.tiny-container {
+    display: flex;
+    justify-content: space-between;
+
+    &--inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 52%;
+    }
+}
+
+.customers-feed {
+    width: 46%;
+    height: 508px;
+    padding: 2em;
+
+    background: lightpink;
+
+    &__title {
+        @include titleDecor;
+    }
+}
+
+.tasks-section {
+    width: 100%;
+    height: 48%;
+    padding: 2em;
+    margin-bottom: 1.2em;
+
+    background: lightgoldenrodyellow;
+
+    &__title {
+        @include titleDecor;
+    }
+}
+
+.graphics-container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 48%;
+    background: $white;
+
+    &__title {
+        padding-top: 1.7em;
+        padding-bottom: 1em;
+        @include titleDecor;
+    }
+
+    &__graph {
+        margin-bottom: 1em;
+    }
+
+    &__number {
+        margin-bottom: 0.7em;
+
+        font-size: $bigText;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        color: #7872D4;
+    }
+
+    &__subject {
+        display: flex;
+        align-items: center;
+
+        padding-bottom: 1.5em;
+        @include subjectDecor;
+    }
+}
+
+.shipments {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 48%;
+    background: $white;
+
+    &__title {
+        padding-top: 1.7em;
+        padding-bottom: .8em;
+        @include titleDecor;
+    }
+
+    &__map {
+        margin-bottom: 1.2em;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        width: 77.5%;
+    }
+
+    &__number {
+        @include numberDecor;
+    }
+
+    &__subject {
+        display: flex;
+        align-items: center;
+        
+        @include subjectDecor;
+    }
+}

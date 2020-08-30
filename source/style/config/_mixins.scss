@@ -1,0 +1,71 @@
+@mixin navbarText {
+    font-family: 'Lato', sans-serif; 
+    font-size: $tinyText;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+@mixin headerLinkStyle {
+    width: 33.3%;
+    height: 100%;                       
+    border-right: 1px solid #F1F1F1;
+    background: #FFFFFF;
+}
+
+@mixin createSingleDot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #BFBFBF;
+}
+
+@mixin createDots {
+    position: relative;
+    @include createSingleDot;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        @include createSingleDot;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        @include createSingleDot;
+    }
+}
+
+@mixin titleDecor {
+    font-size: $middleText;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: $title-color;
+}
+
+@mixin headerSubDecor {
+    padding-bottom: 0.5em;
+    font-size: $semiTinyText;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: $title-color;
+}
+
+@mixin numberDecor {
+    margin-bottom: 0.5em;
+    font-size: $bigText;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: $primary-color-light;
+}
+
+@mixin subjectDecor {
+    font-size: $semiTinyText;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #BFBFBF;
+}
