@@ -69,3 +69,10 @@
     font-weight: bold;
     color: #BFBFBF;
 }
+
+@mixin personDetails {
+    font-size: $tinyText;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    color: #BFBFBF;
+}

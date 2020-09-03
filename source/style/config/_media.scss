@@ -1,4 +1,12 @@
 @media (max-width: 780px) {
+    .navbar {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
     .header__person-dots {
         display: none;
     }

@@ -28,6 +28,10 @@
         @include headerLinkStyle;
     }
 
+    &__menu-link:hover {
+        box-shadow: 5px 5px 15px $primary-color-light;
+    }
+
     &__menu-link--rectangle {
         background: url(../img/header/rectangle_icon.png) no-repeat center center;
     }
@@ -39,6 +43,7 @@
     &__menu-link--last {
         background: url(../img/header/settings_icon.png) no-repeat center center;
     }
+
 
     &__menu-section--search {
         display: flex;
@@ -116,7 +121,7 @@
         justify-content: space-between;
         align-items: center;
 
-        width: 50%;
+        width: 55%;
 
         &--inner {
             display: flex;
@@ -135,10 +140,7 @@
     }
 
     &__person-details {
-        font-size: $tinyText;
-        font-family: 'Lato', sans-serif;
-        font-weight: normal;
-        color: #BFBFBF;
+        @include personDetails;
     }
 
     &__person-dots {
@@ -150,13 +152,11 @@
     }
 
     &__burger {
-        position: absolute;
+        position: relative;
         display: none;
-        top: calc(50% - 1.5px);
-        right: 38px;
         width: 2.1em;
         height: 3px;
-        background: #111111;
+        background: $primary-color-dark;
 
         &::before {
             content: '';
@@ -164,7 +164,7 @@
             top: -8px;
             width: 2.1em;
             height: 3px;
-            background: #111111;
+            background: $primary-color-dark;
         }
 
         &::after {
@@ -173,7 +173,7 @@
             top: 8px;
             width: 2.1em;
             height: 3px;
-            background: #111111;
+            background: $primary-color-dark;
         }
 
         &:hover {

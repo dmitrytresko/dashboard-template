@@ -22,6 +22,10 @@
         background: $white;
     }
 
+    &__badge-block {
+        cursor: pointer;
+    }
+
     &__badge {
         text-transform: uppercase;
         font-family: 'Deftone Stylus', arial;

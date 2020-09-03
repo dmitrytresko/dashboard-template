@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+
+    width: 1370px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    width: 95%;
+}
