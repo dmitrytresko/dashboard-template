@@ -30,6 +30,7 @@
 
     &__menu-link:hover {
         box-shadow: 5px 5px 15px $primary-color-light;
+        transition: all .4s;
     }
 
     &__menu-link--rectangle {

@@ -410,7 +410,9 @@ template {
 }
 
 .header__menu-link {
-  width: 33.3%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: 100%;
   border-right: 1px solid #F1F1F1;
   background: #FFFFFF;
@@ -419,6 +421,8 @@ template {
 .header__menu-link:hover {
   -webkit-box-shadow: 5px 5px 15px #FD7858;
           box-shadow: 5px 5px 15px #FD7858;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .header__menu-link--rectangle {
@@ -1218,7 +1222,7 @@ main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: .9em 0;
+  padding: .8em 0;
   background: #FD7858;
 }
 
@@ -1233,7 +1237,7 @@ main {
 
 .aside__star-list {
   width: 100%;
-  height: 516px;
+  height: 505px;
   overflow-y: scroll;
   list-style: none;
   background: #FFFFFF;
@@ -1246,6 +1250,9 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   width: 85%;
   margin: 0 auto;
   background: #FFFFFF;
@@ -1256,8 +1263,7 @@ main {
 }
 
 .aside__profile-photo {
-  padding: 1.35em 0;
-  margin-right: 1.1em;
+  margin: 1.3em 1.1em 1.3em 0;
 }
 
 .aside__profile-photo:hover {
@@ -1310,15 +1316,152 @@ main {
 }
 
 .aside__search-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  height: 48px;
-  background: blue;
+  border-top: 1px solid #F1F1F1;
+  border-bottom: 1px solid #F1F1F1;
+  background: #FCFCFC;
+}
+
+.aside__form {
+  position: relative;
+  width: 86%;
+  padding: .8em 0;
+}
+
+.aside input {
+  width: 72.5%;
+  padding: .8em 0 .8em .2em;
+  font-family: 'Lato', sans-serif;
+  font-size: calc(9px + 0.1vw);
+  font-weight: normal;
+  color: #C0C0C0;
+  border: none;
+  border-bottom: 1px solid #F1F1F1;
+  background: #FCFCFC;
+}
+
+.aside__form--btn-search {
+  position: absolute;
+  top: 0;
+  right: 12.5%;
+  height: 100%;
+  padding: .5em 1.5em .8em 0;
+  border: none;
+  background: url(../img/aside/loupe.png) no-repeat center center;
+  cursor: pointer;
+}
+
+.aside__form--btn-edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: .5em 1.5em .8em 0;
+  border: none;
+  background: url(../img/aside/pencil.png) no-repeat center center;
+  cursor: pointer;
 }
 
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  height: 205px;
-  background: orangered;
+  background: #FFFFFF;
+}
+
+.footer__title {
+  font-size: calc(10.5px + 0.25vw);
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: #777777;
+  padding: 1.6em 0;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 75%;
+  padding-bottom: 1.6em;
+  list-style: none;
+}
+
+.footer__container--top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 55px;
+  margin-bottom: 1em;
+  background: #FFFFFF;
+}
+
+.footer__container--bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 55px;
+  background: #FFFFFF;
+}
+
+.footer__item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 100%;
+}
+
+.footer__item--rdio {
+  background: url(../img/footer/rdio.png) no-repeat center center;
+}
+
+.footer__item--css-3 {
+  background: url(../img/footer/css-3.png) no-repeat center center;
+}
+
+.footer__item--deviantart {
+  background: url(../img/footer/deviantart.png) no-repeat center center;
+}
+
+.footer__item--xing {
+  background: url(../img/footer/xing.png) no-repeat center center;
+}
+
+.footer__item--vimeo {
+  background: url(../img/footer/vimeo.png) no-repeat center center;
+}
+
+.footer__item--vk {
+  background: url(../img/footer/vk.png) no-repeat center center;
+}
+
+.footer__link {
+  padding: 0 2.2em 2.3em 2.2em;
 }
 
 @media (max-width: 780px) {
