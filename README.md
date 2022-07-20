@@ -1,3 +1,3 @@
 # dashboard-template
 
-https://dmitrytresko.github.io/dashboard-template/
+https://dmitryttresko.github.io/dashboard-template/
