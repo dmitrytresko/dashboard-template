@@ -1,3 +1,3 @@
-# final
+# dashboard-template
 
-https://dmitry-tresko.github.io/final/
+https://dmitrytresko.github.io/dashboard-template/
